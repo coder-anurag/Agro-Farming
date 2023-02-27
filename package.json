@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/Anuragmaurya-code/Agro-Farming/issues"
   },
-  "homepage": "https://github.com/Anuragmaurya-code/Agro-Farming#readme"
+  "homepage": "https://github.com/Anuragmaurya-code/Agro-Farming#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  }
 }
