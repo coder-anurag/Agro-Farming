@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stanantarit krushi</title>
+    <meta charset="UTF-8" />
+    <meta name="viewpoint" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="tabpage.css" />
+    <link rel="stylesheet" type="text/css" href="home_style.css" />
+
+    <script src="mapdata.js"></script>
+    <script src="countrymap.js"></script>
+  </head>
+
+  <body>
+    <div class="container1">
+    <%- include("./partials/nav") -%>
+      <!--Map
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.js" integrity="sha256-OztcN49BsVSoupBpIZaUwczM6+GLsXuA8IJF+W9SsBU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datamaps/0.5.9/datamaps.ind.js" integrity="sha256-dIqkWXhup1J7R2OiniHh0/nH6hw0ELzNSKfBkO1WHlQ=" crossorigin="anonymous"></script>
+    <script>
+        $( function(){
+            var election = new Datamap({
+                scope: 'india',
+                element: document.getElementById('map'),
+                setProjection: function (element) {
+                    var projection = d3.geo.mercator()
+                        .center([90.9629, 23.5937]) // always in [East Latitude, North Longitude]
+                        .scale(1000);
+                    var path = d3.geo.path().projection(projection);
+                    return { path: path, projection: projection };
+                },
+                geographyConfig: {
+                    dataUrl: 'https://rawgit.com/Anujarya300/bubble_maps/master/data/geography-data/india.topo.json'
+                }
+            });
+        });
+    </script>
+    Map-->
+      <div id="img">
+        <img src="homepage.png" id="image" />
+      </div>
+      <div id="welcometext">Welcome</div>
+    </div>
+    <div class="container2">
+      <div class="grid-item" id="map"></div>
+      <div class="grid-item" id="btn1">
+        <a href="SearchByState">
+          <button class="button" role="button">Search by State</button>
+        </a>
+      </div>
+      <div class="grid-item" id="btn2">
+        <a href="SearchBySoil">
+          <button class="button" role="button">Search by Soil</button>
+        </a>
+      </div>
+      <div class="grid-item" id="btn3">
+        <a href="SearchBySeason">
+          <button class="button" role="button">Search by Season</button>
+        </a>
+      </div>
+      <div class="grid-item" id="btn4">
+        <a href="SearchByCrop">
+          <button class="button" role="button">Search by Crop</button>
+        </a>
+      </div>
+      
+    </div>
+    <%-include("./partials/footer")-%>
+    <script>
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Stanantarit krushi</title>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="tabpage.css">
+
+    <script src="mapdata.js"></script>
+    <script src="countrymap.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <%-include("./partials/nav")-%>
+
+        <div class="grid-item" id="map">
+            
+        </div>
+
+        <div id="selector">
+            <div class="select">
+                <h2>Select Soil</h2>
+
+                <div class="select-box">
+                    <div class="options-container">
+                        <div class="option">
+                            <input type="radio" class="radio" id="forest" name="category" />
+                            <label for="automobiles">Forest Soil</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="arid" name="category" />
+                            <label for="automobiles">Arid Soil</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="black" name="category" />
+                            <label for="automobiles">Black Soil</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="laterite" name="category" />
+                            <label for="automobiles">Laterite Soil</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="alluvial" name="category" />
+                            <label for="automobiles">Alluvial Soil</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="red_yellow" name="category" />
+                            <label for="automobiles">Red and Yellow Soil</label>
+                        </div>
+                        
+                    </div>
+
+                    <div class="selected">
+                        Select a soil
+                    </div>
+
+                    <div class="search-box">
+                        <input type="text" placeholder="Start Typing..." />
+                    </div>
+                </div>
+            </div>
+
+            <script src="tabpage.js"></script>
+            
+
+        </div>
+        <div id="show_info">
+            Info Above crop
+        </div>
+
+        <%-include("./partials/footer")-%>
+    </div>
+</body>
+
+</html>

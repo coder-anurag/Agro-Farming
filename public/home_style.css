@@ -1,0 +1,167 @@
+:root {
+  --main-radius: 5px;
+  --main-padding: 0px;
+}
+
+body {
+  margin: 0;
+  background-color: #435052;
+}
+
+.container1 {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas:
+    "nav"
+    "img";
+  grid-gap: 0em;
+}
+
+.container2 {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-rows: 2fr 2fr 1fr 1fr;
+  grid-template-areas:
+    "map btn1 btn2"
+    "map btn3 btn4"
+    "map empty empty"
+    "footer footer footer";
+  grid-gap: 0.2em;
+  background-color: #d9ffff;
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#image {
+  width: 100%;
+  height: 100vh;
+}
+
+#img {
+  grid-area: img;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+}
+
+#welcometext {
+  grid-area: img;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+  margin-top: 8%;
+  margin-left: 18%;
+  font-size: 60px;
+  z-index: 1;
+}
+
+#map {
+  grid-area: map;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+}
+
+
+#btn1 {
+  grid-area: btn1;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+  ;
+
+}
+
+#btn2 {
+  grid-area: btn2;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+}
+
+#btn3 {
+  grid-area: btn3;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+}
+
+#btn4 {
+  grid-area: btn4;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+}
+
+footer {
+  grid-area: footer;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+}
+
+/*
+@media only screen and (max-width: 550px) {
+  .container2{
+      grid-template-columns: 1.5fr;
+      grid-template-rows: auto;
+      grid-template-areas: 
+      "btn1"
+      "btn2"
+      "btn3"
+      "btn4"
+      "map";
+  }
+  .container1{
+    grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: 
+      "nav"
+      "img";
+  }
+  
+}*/
+
+
+.button {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 25px 50px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+  position: center;
+  height: 100%;
+  width: 100%;
+
+}
+
+.button:disabled {
+  pointer-events: none;
+}
+
+.button:hover {
+  color: #fff;
+  background-color: #435052;
+  box-shadow: rgba(205, 215, 205, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
